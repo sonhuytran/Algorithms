@@ -135,6 +135,10 @@ public class SHSorter {
 		case InsertionSort:
 			sortingAlgorithm = InsertionSortAlgorithm.getInstance(this.order);
 			break;
+
+		case MergeSort:
+			sortingAlgorithm = MergeSortAlgorithm.getInstance(this.order);
+			break;
 		}
 
 		sortingAlgorithm.sort(inputs);
