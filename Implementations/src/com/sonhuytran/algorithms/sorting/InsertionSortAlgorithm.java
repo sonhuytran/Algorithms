@@ -25,11 +25,14 @@ class InsertionSortAlgorithm extends SortingAlgorithm {
 	}
 
 	@Override
-	public <T extends Comparable<T>> void sort(T[] inputs, SortingOrder order) {
+	protected <T extends Comparable<T>> void doSort(T[] inputs, SortingOrder order,
+			int begin, int stop) {
+		assert stop < inputs.length;
+		
 		int i, j;
 
 		if (order == SortingOrder.NormalOrder) {
-			for (i = 1; i < inputs.length; i++) {
+			for (i = begin + 1; i < stop; i++) {
 				T key = inputs[i];
 
 				j = i - 1;
@@ -55,6 +58,5 @@ class InsertionSortAlgorithm extends SortingAlgorithm {
 				inputs[j + 1] = key;
 			}
 		}
-
 	}
 }

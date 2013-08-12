@@ -27,11 +27,13 @@ public class MergeSortAlgorithm extends SortingAlgorithm {
 	}
 
 	@Override
-	public <T extends Comparable<T>> void sort(T[] inputs, SortingOrder order) {
-		this.sort(inputs, order, 0, inputs.length - 1);
+	protected <T extends Comparable<T>> void doSort(T[] inputs, SortingOrder order, int begin, int stop) {
+		assert stop <= inputs.length;
+		
+		this.mergeSort(inputs, order, begin, stop - 1);
 	}
 
-	private <T extends Comparable<T>> void sort(T[] inputs, SortingOrder order,
+	private <T extends Comparable<T>> void mergeSort(T[] inputs, SortingOrder order,
 			int p, int r) {
 		if (p < r) {
 			int q = (p + r) / 2;
@@ -43,10 +45,8 @@ public class MergeSortAlgorithm extends SortingAlgorithm {
 
 	private <T extends Comparable<T>> void merge(T[] inputs, int p, int q,
 			int r, SortingOrder order) {
-		if (p > q || q > r) {
-			throw new IllegalArgumentException("MUST HAVE p <= q <= r");
-		}
-
+		assert (p <= q && q <= r) : "MUST HAVE p <= q <= r";
+		
 		int length1 = q - p + 1;
 		int length2 = r - q;
 
