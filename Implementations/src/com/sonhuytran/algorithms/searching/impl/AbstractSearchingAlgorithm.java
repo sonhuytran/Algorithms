@@ -10,5 +10,5 @@ import com.sonhuytran.algorithms.searching.ISearchingAlgorithm;
  * 
  */
 public abstract class AbstractSearchingAlgorithm implements ISearchingAlgorithm {
-	protected static final int INDEX_NOT_FOUND = -1;
+	public static final int INDEX_NOT_FOUND = -1;
 }
