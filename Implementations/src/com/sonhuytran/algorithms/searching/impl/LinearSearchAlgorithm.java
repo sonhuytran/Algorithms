@@ -7,32 +7,12 @@ public class LinearSearchAlgorithm extends AbstractSearchingAlgorithm {
 
 	@Override
 	public <T> int doSearch(T[] objects, T key) {
-		if (null == key) {
-			return INDEX_NOT_FOUND;
-		}
-
-		for (int i = 0; i < objects.length; i++) {
-			if (key.equals(objects[i])) {
-				return i;
-			}
-		}
-
-		return INDEX_NOT_FOUND;
+		return doSearch(objects, key, null);
 	}
 
 	@Override
 	public <T> int doSearch(List<T> objects, T key) {
-		if (null == key) {
-			return INDEX_NOT_FOUND;
-		}
-
-		for (int i = 0; i < objects.size(); i++) {
-			if (key.equals(objects.get(i))) {
-				return i;
-			}
-		}
-
-		return INDEX_NOT_FOUND;
+		return doSearch(objects, key, null);
 	}
 
 	@Override
@@ -42,9 +22,17 @@ public class LinearSearchAlgorithm extends AbstractSearchingAlgorithm {
 			return INDEX_NOT_FOUND;
 		}
 
-		for (int i = 0; i < objects.length; i++) {
-			if (comparator.compare(objects[i], key) == 0) {
-				return i;
+		if (comparator == null) {
+			for (int i = 0; i < objects.length; i++) {
+				if (key.equals(objects[i])) {
+					return i;
+				}
+			}
+		} else {
+			for (int i = 0; i < objects.length; i++) {
+				if (comparator.compare(objects[i], key) == 0) {
+					return i;
+				}
 			}
 		}
 
@@ -58,9 +46,17 @@ public class LinearSearchAlgorithm extends AbstractSearchingAlgorithm {
 			return INDEX_NOT_FOUND;
 		}
 
-		for (int i = 0; i < objects.size(); i++) {
-			if (comparator.compare(objects.get(i), key) == 0) {
-				return i;
+		if (comparator == null) {
+			for (int i = 0; i < objects.size(); i++) {
+				if (key.equals(objects.get(i))) {
+					return i;
+				}
+			}
+		} else {
+			for (int i = 0; i < objects.size(); i++) {
+				if (comparator.compare(objects.get(i), key) == 0) {
+					return i;
+				}
 			}
 		}
 

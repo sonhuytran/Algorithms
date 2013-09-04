@@ -15,14 +15,13 @@ import com.google.inject.Guice;
 import com.google.inject.Injector;
 import com.sonhuytran.algorithms.searching.ISearcher;
 import com.sonhuytran.algorithms.searching.impl.AbstractSearchingAlgorithm;
-import com.sonhuytran.algorithms.searching.test.config.LinearSearchModule;
+import com.sonhuytran.algorithms.searching.test.config.BinarySearchModule;
 
 /**
  * @author Son-Huy TRAN
  * 
  */
-public class LinearSearchTest {
-
+public class BinarySearchTest {
 	private Injector injector = null;
 	private ISearcher searcher = null;
 	private IntegerComparator comparator = null;
@@ -30,17 +29,17 @@ public class LinearSearchTest {
 	@BeforeClass
 	private void configure() {
 		System.out.println("Pre-init");
-		this.injector = Guice.createInjector(new LinearSearchModule());
+		this.injector = Guice.createInjector(new BinarySearchModule());
 		this.searcher = injector.getInstance(ISearcher.class);
 		this.comparator = new IntegerComparator();
 	}
 
 	@Test
 	public void test1() {
-		Integer[] objects = new Integer[] { 3, 1, 9, 5, 7 };
-		Integer key1 = 5;
-		Integer key2 = 3;
-		Integer key3 = 7;
+		Integer[] objects = new Integer[] { 1, 3, 5, 7, 9 };
+		Integer key1 = 7;
+		Integer key2 = 1;
+		Integer key3 = 9;
 		Integer key4 = 6;
 		Integer key5 = 10;
 
@@ -55,11 +54,10 @@ public class LinearSearchTest {
 
 	@Test
 	public void test2() {
-		Integer[] objects = new Integer[] { 3, 1, 9, 5, 7 };
-
-		Integer key1 = 5;
-		Integer key2 = 3;
-		Integer key3 = 7;
+		Integer[] objects = new Integer[] { 1, 3, 5, 7, 9 };
+		Integer key1 = 7;
+		Integer key2 = 1;
+		Integer key3 = 9;
 		Integer key4 = 6;
 		Integer key5 = 10;
 
@@ -74,12 +72,12 @@ public class LinearSearchTest {
 
 	@Test
 	public void test3() {
-		Integer[] array = new Integer[] { 3, 1, 9, 5, 7 };
+		Integer[] array = new Integer[] { 1, 3, 5, 7, 9 };
 		List<Integer> objects = Arrays.asList(array);
 
-		Integer key1 = 5;
-		Integer key2 = 3;
-		Integer key3 = 7;
+		Integer key1 = 7;
+		Integer key2 = 1;
+		Integer key3 = 9;
 		Integer key4 = 6;
 		Integer key5 = 10;
 
@@ -94,12 +92,12 @@ public class LinearSearchTest {
 
 	@Test
 	public void test4() {
-		Integer[] array = new Integer[] { 3, 1, 9, 5, 7 };
+		Integer[] array = new Integer[] { 1, 3, 5, 7, 9 };
 		List<Integer> objects = Arrays.asList(array);
 
-		Integer key1 = 5;
-		Integer key2 = 3;
-		Integer key3 = 7;
+		Integer key1 = 7;
+		Integer key2 = 1;
+		Integer key3 = 9;
 		Integer key4 = 6;
 		Integer key5 = 10;
 

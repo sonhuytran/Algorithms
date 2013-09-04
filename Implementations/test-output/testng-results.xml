@@ -2,32 +2,32 @@
 <testng-results skipped="0" failed="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="747" started-at="2013-09-03T15:28:23Z" finished-at="2013-09-03T15:28:24Z">
+  <suite name="Default suite" duration-ms="673" started-at="2013-09-04T10:13:43Z" finished-at="2013-09-04T10:13:43Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="747" started-at="2013-09-03T15:28:23Z" finished-at="2013-09-03T15:28:24Z">
-      <class name="com.sonhuytran.algorithms.searching.test.LinearSearchTest">
-        <test-method status="PASS" signature="configure()[pri:0, instance:com.sonhuytran.algorithms.searching.test.LinearSearchTest@32fac7c5]" name="configure" is-config="true" duration-ms="694" started-at="2013-09-03T17:28:23Z" finished-at="2013-09-03T17:28:24Z">
+    <test name="Default test" duration-ms="673" started-at="2013-09-04T10:13:43Z" finished-at="2013-09-04T10:13:43Z">
+      <class name="com.sonhuytran.algorithms.searching.test.BinarySearchTest">
+        <test-method status="PASS" signature="configure()[pri:0, instance:com.sonhuytran.algorithms.searching.test.BinarySearchTest@24bb5e2d]" name="configure" is-config="true" duration-ms="616" started-at="2013-09-04T12:13:43Z" finished-at="2013-09-04T12:13:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configure -->
-        <test-method status="PASS" signature="test1()[pri:0, instance:com.sonhuytran.algorithms.searching.test.LinearSearchTest@32fac7c5]" name="test1" duration-ms="14" started-at="2013-09-03T17:28:24Z" finished-at="2013-09-03T17:28:24Z">
+        <test-method status="PASS" signature="test1()[pri:0, instance:com.sonhuytran.algorithms.searching.test.BinarySearchTest@24bb5e2d]" name="test1" duration-ms="15" started-at="2013-09-04T12:13:43Z" finished-at="2013-09-04T12:13:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test1 -->
-        <test-method status="PASS" signature="test2()[pri:0, instance:com.sonhuytran.algorithms.searching.test.LinearSearchTest@32fac7c5]" name="test2" duration-ms="1" started-at="2013-09-03T17:28:24Z" finished-at="2013-09-03T17:28:24Z">
+        <test-method status="PASS" signature="test2()[pri:0, instance:com.sonhuytran.algorithms.searching.test.BinarySearchTest@24bb5e2d]" name="test2" duration-ms="2" started-at="2013-09-04T12:13:43Z" finished-at="2013-09-04T12:13:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test2 -->
-        <test-method status="PASS" signature="test3()[pri:0, instance:com.sonhuytran.algorithms.searching.test.LinearSearchTest@32fac7c5]" name="test3" duration-ms="2" started-at="2013-09-03T17:28:24Z" finished-at="2013-09-03T17:28:24Z">
+        <test-method status="PASS" signature="test3()[pri:0, instance:com.sonhuytran.algorithms.searching.test.BinarySearchTest@24bb5e2d]" name="test3" duration-ms="3" started-at="2013-09-04T12:13:43Z" finished-at="2013-09-04T12:13:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test3 -->
-        <test-method status="PASS" signature="test4()[pri:0, instance:com.sonhuytran.algorithms.searching.test.LinearSearchTest@32fac7c5]" name="test4" duration-ms="1" started-at="2013-09-03T17:28:24Z" finished-at="2013-09-03T17:28:24Z">
+        <test-method status="PASS" signature="test4()[pri:0, instance:com.sonhuytran.algorithms.searching.test.BinarySearchTest@24bb5e2d]" name="test4" duration-ms="2" started-at="2013-09-04T12:13:43Z" finished-at="2013-09-04T12:13:43Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test4 -->
-      </class> <!-- com.sonhuytran.algorithms.searching.test.LinearSearchTest -->
+      </class> <!-- com.sonhuytran.algorithms.searching.test.BinarySearchTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
